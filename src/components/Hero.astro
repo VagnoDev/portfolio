@@ -1,0 +1,164 @@
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text fade-in">
+            <span class="tag">Developer & Student</span>
+            <h1>Ehy<br> <span class="gradient-text">I'm Vagno</span></h1>
+            <p>Student developer mastering the art of backend engineering and distributed architectures.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual fade-in">
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <pre><code><span class="keyword">const</span> <span class="variable">vagno</span> = &#123;
+  <span class="property">role</span>: <span class="string">"Student Dev"</span>,
+  <span class="property">stack</span>: [
+    <span class="string">"Go"</span>,
+    <span class="string">"TypeScript"</span>,
+    <span class="string">"Linux"</span>
+  ],
+  <span class="property">learning</span>: <span class="boolean">true</span>
+&#125;;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 100px;
+        position: relative;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 6rem;
+        align-items: center;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--card-border);
+        color: var(--text-primary);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+        font-weight: 800;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        color: var(--text-secondary);
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+        max-width: 500px;
+        line-height: 1.7;
+    }
+
+    .hero-btns {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .code-block {
+        background: rgba(20, 20, 22, 0.6);
+        border-radius: 24px;
+        padding: 2.5rem;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+        border: 1px solid var(--card-border);
+        font-family: 'Fira Code', monospace;
+        position: relative;
+        transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+        transition: transform 0.5s ease;
+        backdrop-filter: blur(20px);
+    }
+
+    .code-block:hover {
+        transform: perspective(1000px) rotateY(0) rotateX(0);
+    }
+
+    .code-header {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 2rem;
+    }
+
+    .code-header .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .dot.red {
+        background: #ff5f56;
+    }
+
+    .dot.yellow {
+        background: #ffbd2e;
+    }
+
+    .dot.green {
+        background: #27c93f;
+    }
+
+    pre {
+        color: #a1a1aa;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .keyword {
+        color: #c678dd;
+    }
+
+    .variable {
+        color: #e06c75;
+    }
+
+    .property {
+        color: #d19a66;
+    }
+
+    .string {
+        color: #98c379;
+    }
+
+    .boolean {
+        color: #56b6c2;
+    }
+
+    @media (max-width: 968px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero-btns {
+            justify-content: center;
+        }
+    }
+</style>

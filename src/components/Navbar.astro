@@ -1,0 +1,111 @@
+<nav>
+    <div class="container nav-content">
+        <a href="#" class="logo">vagno<span class="dot">.</span>dev</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="btn-nav">Contact Me</a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    nav {
+        padding: 2rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: 0.3s;
+    }
+
+    nav.scrolled {
+        background: rgba(5, 5, 5, 0.95);
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    .dot {
+        color: var(--accent-blue);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: var(--text-secondary);
+        font-weight: 500;
+        font-size: 0.95rem;
+        position: relative;
+    }
+
+    .nav-links a:hover {
+        color: var(--text-primary);
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        left: 0;
+        background: white;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .btn-nav {
+        padding: 0.6rem 1.5rem;
+        background: white;
+        color: black !important;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    .btn-nav:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-nav::after {
+        display: none;
+    }
+
+    @media (max-width: 968px) {
+        .nav-links {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    const navbar = document.querySelector('nav');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+</script>

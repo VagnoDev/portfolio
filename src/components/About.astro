@@ -1,0 +1,176 @@
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="bio-card fade-in">
+                <h3>Who am I?</h3>
+                <p>
+                    I'm a student developer who loves breaking things to see how
+                    they work (and then fixing them... usually). My world
+                    revolves around the terminal, clean code, and building
+                    systems that just
+                    <i>work</i>.
+                </p>
+                <p>
+                    I'm not an "expert" yet, but I'm learning fast. Whether it's
+                    wrestling with Linux configs or diving into Go routines, I'm
+                    all about the process.
+                </p>
+            </div>
+
+            <div class="terminal-card fade-in">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">learning_goals.json</span>
+                </div>
+                <div class="terminal-body">
+                    <pre><code><span class="keyword">const</span> <span class="variable">current_focus</span> = &#123;
+  <span class="property">languages</span>: [
+    <span class="string">"Rust"</span>,
+    <span class="string">"Java"</span>
+  ],
+  <span class="property">skills</span>: [
+    <span class="string">"Backend Arch"</span>,
+    <span class="string">"Server Mgmt"</span>
+  ],
+  <span class="property">status</span>: <span class="string">"Loading..."</span>
+&#125;;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        padding: 6rem 0;
+        position: relative;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .bio-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 24px;
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .bio-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+
+    .bio-card p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .bio-card p:last-child {
+        margin-bottom: 0;
+    }
+
+    .terminal-card {
+        background: #0f0f11;
+        border-radius: 16px;
+        border: 1px solid var(--card-border);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        font-family: "Fira Code", monospace;
+        transform: rotate(2deg);
+        transition: transform 0.3s ease;
+    }
+
+    .terminal-card:hover {
+        transform: rotate(0deg) scale(1.02);
+    }
+
+    .terminal-header {
+        background: #1a1a1c;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #27272a;
+    }
+
+    .terminal-title {
+        margin-left: auto;
+        margin-right: auto;
+        color: #71717a;
+        font-size: 0.8rem;
+        font-family: var(--font-main);
+    }
+
+    .terminal-body {
+        padding: 2rem;
+    }
+
+    .terminal-body pre {
+        margin: 0;
+    }
+
+    .comment {
+        color: #5c6370;
+        font-style: italic;
+    }
+
+    .code-header .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .dot.red {
+        background: #ff5f56;
+    }
+
+    .dot.yellow {
+        background: #ffbd2e;
+    }
+
+    .dot.green {
+        background: #27c93f;
+    }
+
+    .keyword {
+        color: #c678dd;
+    }
+
+    .variable {
+        color: #e06c75;
+    }
+
+    .property {
+        color: #d19a66;
+    }
+
+    .string {
+        color: #98c379;
+    }
+
+    @media (max-width: 968px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .terminal-card {
+            transform: rotate(0deg);
+        }
+    }
+</style>

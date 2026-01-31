@@ -1,0 +1,63 @@
+---
+export interface Skill {
+  id: string;
+  name: string;
+  icon: string;
+}
+const { skills } = Astro.props as { skills: Skill[] };
+---
+
+<div class="skills-carousel">
+  {skills.map(skill => (
+    <div class="skill-card">
+      <img src={skill.icon} alt={skill.name} class="skill-icon" />
+      <span class="skill-name">{skill.name}</span>
+    </div>
+  ))}
+</div>
+
+<style is:global>
+  .skills-carousel {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    overflow-x: auto;
+    gap: 1.5rem; 
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .skills-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+  .skills-carousel::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+  }
+
+  .skill-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    min-width: 100px;
+    transition: transform 0.2s;
+  }
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+  .skill-name {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    color: var(--font-color-light);
+  }
+</style>

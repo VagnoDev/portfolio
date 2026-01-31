@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import astroLogo from "../assets/astro-logo-light.svg";
+---
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; {new Date().getFullYear()} Vagno. All rights reserved.</p>
+            <div class="footer-links">
+                <a
+                    href="https://astro.build"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="astro-link"
+                >
+                    Made with <Image
+                        src={astroLogo}
+                        alt="Astro Logo"
+                        width={20}
+                        height={20}
+                        draggable="false"
+                    />
+                </a>
+                <span class="separator">|</span>
+                <a
+                    href="https://github.com/VagnoDev/portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        padding: 3rem 0;
+        border-top: 1px solid var(--card-border);
+        background: #050505;
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .astro-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .separator {
+        opacity: 0.5;
+    }
+
+    a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    a:hover {
+        color: var(--accent);
+    }
+
+    @media (min-width: 768px) {
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+</style>

@@ -1,0 +1,248 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section id="commissions" class="commissions-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Websites <span class="gradient-text">I Made</span></h2>
+            <p>Commissioned work and live websites.</p>
+        </div>
+
+        <div class="projects-grid">
+            <a
+                href="https://gameris.online"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card fade-in"
+            >
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Gameris</h3>
+                        <div class="project-links">
+                            <span class="icon-link"
+                                ><i class="fa-solid fa-external-link-alt"
+                                ></i></span
+                            >
+                        </div>
+                    </div>
+                    <p class="project-url">gameris.online</p>
+                    <div class="project-tags">
+                        <div class="tech-icon" title="HTML5">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                width={35}
+                                height={35}
+                                alt="HTML5"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="tech-icon" title="CSS3">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                width={35}
+                                height={35}
+                                alt="CSS3"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                width={35}
+                                height={35}
+                                alt="JavaScript"
+                                draggable="false"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="https://moonstack.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card fade-in"
+            >
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>MoonStack</h3>
+                        <div class="project-links">
+                            <span class="icon-link"
+                                ><i class="fa-solid fa-external-link-alt"
+                                ></i></span
+                            >
+                        </div>
+                    </div>
+                    <p class="project-url">moonstack.eu</p>
+                    <div class="project-tags">
+                        <div class="tech-icon" title="HTML5">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                width={35}
+                                height={35}
+                                alt="HTML5"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="tech-icon" title="CSS3">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                width={35}
+                                height={35}
+                                alt="CSS3"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <Image
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                width={35}
+                                height={35}
+                                alt="JavaScript"
+                                draggable="false"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .commissions-section {
+        padding: 6rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .section-header p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        justify-items: center;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: auto;
+        position: relative;
+        text-decoration: none;
+        padding: 2.5rem 2rem;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 450px;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.2rem;
+        position: relative;
+    }
+
+    .project-links {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .project-header h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .project-url {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        font-family: monospace;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
+    .tech-icon {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s;
+    }
+
+    .tech-icon:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .icon-link {
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        transition: color 0.2s;
+    }
+
+    .project-card:hover .icon-link {
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import TechStack from "../components/TechStack.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import Commissions from "../components/Commissions.astro";
+---
+
+<Layout
+    title="Vagno | Developer & Student"
+    description="Vagno Developer Portfolio"
+>
+    <Navbar />
+    <main>
+        <Hero />
+        <About />
+        <TechStack />
+        <Projects />
+        <Commissions />
+        <Contact />
+    </main>
+    <Footer />
+</Layout>
+
+<script>
+    const observerOptions = {
+        threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = anchor.getAttribute("href");
+            if (href) {
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                    });
+                }
+            }
+        });
+    });
+</script>

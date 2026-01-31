@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/vagno.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<style is:global>
+			* {
+				-webkit-user-drag: none;
+				-khtml-user-drag: none;
+				-moz-user-drag: none;
+				-o-user-drag: none;
+				user-drag: none;
+			}
+
+			img,
+			a,
+			div,
+			span,
+			section {
+				-webkit-user-drag: none;
+				user-select: none;
+			}
+
+			img {
+				pointer-events: none;
+			}
+		</style>
+		<script>
+			window.addEventListener(
+				"dragstart",
+				(e) => {
+					e.preventDefault();
+				},
+				false,
+			);
+		</script>
+	</head>
+	<body>
+		<div class="ambient-glow"></div>
+		<slot />
+	</body>
+</html>
