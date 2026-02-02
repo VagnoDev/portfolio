@@ -26,7 +26,6 @@
 - **Framework**: Astro 
 - **Icons**: Font Awesome & Devicons
 - **Styling**: Vanilla CSS (Custom Glassmorphism)
-- **Deployment**: Vercel
 
 ## 📦 Local Development
 
