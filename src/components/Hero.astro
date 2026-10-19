@@ -1,30 +1,96 @@
+---
+---
+
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-text fade-in">
-            <span class="tag">Developer & Student</span>
-            <h1>Ehy<br> <span class="gradient-text">I'm Vagno</span></h1>
-            <p>Student developer mastering the art of backend engineering and distributed architectures.</p>
+            <h1>Hey, I'm <br><span class="gradient-text">Vagno</span></h1>
+            <p class="hero-desc">
+                Developer building Discord bots and web tools with TypeScript and JavaScript.
+                Currently exploring Rust to enter the open-source world and craft high-performance personal projects.
+            </p>
             <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View Work</a>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
+
         <div class="hero-visual fade-in">
-            <div class="code-block">
-                <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+            <div class="profile-card">
+                <div class="profile-top">
+                    <img
+                        id="discord-avatar"
+                        class="profile-avatar"
+                        src="/vagno.ico"
+                        width="72"
+                        height="72"
+                        alt="Discord avatar"
+                        draggable="false"
+                    />
+                    <div class="profile-meta">
+                        <span id="discord-name" class="profile-name">Vagno</span>
+                        <span id="discord-handle" class="profile-handle">@vagnodev</span>
+                        <span id="discord-activity" class="profile-activity" hidden></span>
+                    </div>
                 </div>
-                <pre><code><span class="keyword">const</span> <span class="variable">vagno</span> = &#123;
-  <span class="property">role</span>: <span class="string">"Student Dev"</span>,
-  <span class="property">stack</span>: [
-    <span class="string">"Go"</span>,
-    <span class="string">"TypeScript"</span>,
-    <span class="string">"Linux"</span>
-  ],
-  <span class="property">learning</span>: <span class="boolean">true</span>
-&#125;;</code></pre>
+                <div id="discord-status" class="profile-status" hidden>
+                    <span id="discord-status-dot" class="status-dot"></span>
+                    <span id="discord-status-text">Offline</span>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-header">
+                        <div class="icon-wrap">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
+                                width="30"
+                                height="30"
+                                alt="Discord.js"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="feature-info">
+                            <span class="feature-title">Discord Bots</span>
+                            <span class="feature-sub">TypeScript & JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="feature-tags">
+                        <span class="pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16" height="16" alt="TS" />
+                            TypeScript
+                        </span>
+                        <span class="pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="16" height="16" alt="JS" />
+                            JavaScript
+                        </span>
+                        <span class="pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="16" height="16" alt="Node" />
+                            Node.js
+                        </span>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-header">
+                        <div class="icon-wrap">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
+                                width="30"
+                                height="30"
+                                alt="Rust"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="feature-info">
+                            <span class="feature-title">Learning Rust</span>
+                            <span class="feature-sub">Systems & Open Source</span>
+                        </div>
+                        <span class="learning-pill">Exploring</span>
+                    </div>
+                    <p class="feature-detail">
+                        Building personal projects and preparing for open-source contributions.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -41,124 +107,312 @@
 
     .hero-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 6rem;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4rem;
         align-items: center;
-    }
-
-    .tag {
-        display: inline-block;
-        padding: 0.5rem 1.2rem;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--card-border);
-        color: var(--text-primary);
-        border-radius: 50px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        margin-bottom: 2rem;
-        backdrop-filter: blur(10px);
     }
 
     .hero h1 {
         font-size: 4.5rem;
-        line-height: 1;
-        margin-bottom: 2rem;
+        line-height: 1.05;
+        margin-bottom: 1.8rem;
         font-weight: 800;
         letter-spacing: -2px;
     }
 
-    .hero p {
+    .hero-desc {
         color: var(--text-secondary);
-        font-size: 1.25rem;
-        margin-bottom: 3rem;
-        max-width: 500px;
-        line-height: 1.7;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        max-width: 520px;
+        line-height: 1.75;
     }
 
     .hero-btns {
         display: flex;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 
-    .code-block {
-        background: rgba(20, 20, 22, 0.6);
-        border-radius: 24px;
-        padding: 2.5rem;
-        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
-        border: 1px solid var(--card-border);
-        font-family: 'Fira Code', monospace;
-        position: relative;
-        transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
-        transition: transform 0.5s ease;
-        backdrop-filter: blur(20px);
-    }
-
-    .code-block:hover {
-        transform: perspective(1000px) rotateY(0) rotateX(0);
-    }
-
-    .code-header {
+    .profile-card {
+        background: #0c0c0f;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 1.75rem;
         display: flex;
-        gap: 10px;
-        margin-bottom: 2rem;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
-    .code-header .dot {
-        width: 12px;
-        height: 12px;
+    .profile-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-avatar {
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
+        object-fit: cover;
+        background: #18181b;
+        flex-shrink: 0;
     }
 
-    .dot.red {
-        background: #ff5f56;
+    .profile-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        min-width: 0;
     }
 
-    .dot.yellow {
-        background: #ffbd2e;
+    .profile-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
     }
 
-    .dot.green {
-        background: #27c93f;
+    .profile-handle {
+        font-size: 0.85rem;
+        color: #71717a;
     }
 
-    pre {
+    .profile-activity {
+        font-size: 0.85rem;
         color: #a1a1aa;
-        font-size: 1rem;
-        line-height: 1.6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
-    .keyword {
-        color: #c678dd;
+    .profile-activity[hidden] {
+        display: none;
     }
 
-    .variable {
-        color: #e06c75;
+    .profile-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content;
+        padding: 0.35rem 0.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        font-size: 0.85rem;
+        color: #d4d4d8;
     }
 
-    .property {
-        color: #d19a66;
+    .profile-status[hidden] {
+        display: none;
     }
 
-    .string {
-        color: #98c379;
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #71717a;
     }
 
-    .boolean {
-        color: #56b6c2;
+    .status-dot.online {
+        background: #22c55e;
+    }
+
+    .status-dot.idle {
+        background: #eab308;
+    }
+
+    .status-dot.dnd {
+        background: #ef4444;
+    }
+
+    .feature-box {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+    }
+
+    .feature-header {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+    }
+
+    .icon-wrap {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .feature-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .feature-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #ffffff;
+    }
+
+    .feature-sub {
+        font-size: 0.8rem;
+        color: #a1a1aa;
+    }
+
+    .feature-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.3rem 0.7rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #e4e4e7;
+    }
+
+    .learning-pill {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #d4d4d8;
+        font-weight: 600;
+    }
+
+    .feature-detail {
+        font-size: 0.85rem;
+        color: #a1a1aa;
+        line-height: 1.5;
+        margin: 0;
     }
 
     @media (max-width: 968px) {
+        .hero {
+            padding-top: 9.5rem;
+            padding-bottom: 40px;
+            min-height: auto;
+        }
+
         .hero-grid {
             grid-template-columns: 1fr;
+            gap: 3.5rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
+        }
+
+        .hero-desc {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-btns {
             justify-content: center;
         }
+
+        .profile-card {
+            max-width: 480px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 2.6rem;
+        }
+
+        .hero-btns {
+            flex-direction: column;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+        }
+
+        .hero-btns .btn {
+            width: 100%;
+        }
     }
 </style>
+
+<script>
+    const DISCORD_ID = "807558492633169960";
+    const REFRESH_MS = 30000;
+    const STATUS_LABELS: Record<string, string> = {
+        online: "Online",
+        idle: "Idle",
+        dnd: "Do not disturb",
+        offline: "Offline",
+    };
+
+    const avatarEl = document.getElementById("discord-avatar") as HTMLImageElement;
+    const nameEl = document.getElementById("discord-name") as HTMLElement;
+    const handleEl = document.getElementById("discord-handle") as HTMLElement;
+    const activityEl = document.getElementById("discord-activity") as HTMLElement;
+    const statusEl = document.getElementById("discord-status") as HTMLElement;
+    const statusDotEl = document.getElementById("discord-status-dot") as HTMLElement;
+    const statusTextEl = document.getElementById("discord-status-text") as HTMLElement;
+
+    const avatarUrl = (user: { id: string; avatar: string | null }) => {
+        if (user.avatar) {
+            const ext = user.avatar.startsWith("a_") ? "gif" : "png";
+            return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${ext}?size=256`;
+        }
+        const index = Number((BigInt(user.id) >> BigInt(22)) % BigInt(6));
+        return `https://cdn.discordapp.com/embed/avatars/${index}.png`;
+    };
+
+    const renderProfile = (data: any) => {
+        const user = data.discord_user;
+        const status: string = data.discord_status ?? "offline";
+        const custom = (data.activities ?? []).find((a: any) => a.type === 4);
+
+        avatarEl.src = avatarUrl(user);
+        nameEl.textContent = user.global_name || user.username;
+        handleEl.textContent = `@${user.username}`;
+
+        if (custom?.state) {
+            activityEl.textContent = custom.state;
+            activityEl.hidden = false;
+        } else {
+            activityEl.hidden = true;
+        }
+
+        statusDotEl.className = `status-dot ${status}`;
+        statusTextEl.textContent = STATUS_LABELS[status] ?? "Offline";
+        statusEl.hidden = false;
+    };
+
+    const loadDiscordProfile = async () => {
+        try {
+            const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+            if (!res.ok) return;
+            const json = await res.json();
+            if (json.success) renderProfile(json.data);
+        } catch {
+            statusEl.hidden = true;
+        }
+    };
+
+    loadDiscordProfile();
+    setInterval(loadDiscordProfile, REFRESH_MS);
+</script>

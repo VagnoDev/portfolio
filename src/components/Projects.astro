@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 ---
 
 <section id="projects" class="projects-section">
@@ -8,95 +7,24 @@ import { Image } from "astro:assets";
             <h2>Featured <span class="gradient-text">Projects</span></h2>
             <p>Some of the things I've built while learning.</p>
         </div>
-        <div class="projects-grid">
-            <a
-                href="https://github.com/Vagnomatto/simple-password-generator"
-                target="_blank"
-                class="project-card fade-in"
-            >
-                <div class="project-image">
-                    <Image
-                        src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop"
-                        width={800}
-                        height={500}
-                        alt="Password Generator"
-                        draggable="false"
-                    />
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <span class="view-text"
-                                >View Project <i class="fa-solid fa-arrow-right"
-                                ></i></span
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-header">
-                        <h3>Simple Password Generator</h3>
-                        <div class="project-links">
-                            <span class="icon-link"
-                                ><i class="fa-brands fa-github"></i></span
-                            >
-                        </div>
-                    </div>
-                    <p>
-                        A secure and efficient password generator written in Go.
-                        Generates strong, random passwords to enhance digital
-                        security.
-                    </p>
-                    <div class="project-tags">
-                        <span>Go</span>
-                        <span>Security</span>
-                        <span>CLI</span>
-                    </div>
-                </div>
-            </a>
 
+        <article class="project fade-in">
+            <h3>Rusk</h3>
+            <p>
+                A small Rust project where I'm building my own personal text editor, inspired by Vim.
+                I'm still learning Rust, so this is how I practice, try new ideas, and get better while
+                making something useful.
+            </p>
             <a
-                href="https://github.com/Vagnomatto/fluxlogger"
+                href="https://github.com/VagnoDev/Rusk"
                 target="_blank"
-                class="project-card fade-in"
+                rel="noopener noreferrer"
+                class="btn btn-secondary project-btn"
             >
-                <div class="project-image">
-                    <Image
-                        src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2628&auto=format&fit=crop"
-                        width={800}
-                        height={500}
-                        alt="FluxLogger"
-                        draggable="false"
-                    />
-                    <div class="project-overlay">
-                        <div class="overlay-content">
-                            <span class="view-text"
-                                >View Project <i class="fa-solid fa-arrow-right"
-                                ></i></span
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-header">
-                        <h3>FluxLogger</h3>
-                        <div class="project-links">
-                            <span class="icon-link"
-                                ><i class="fa-brands fa-github"></i></span
-                            >
-                        </div>
-                    </div>
-                    <p>
-                        A robust logging system built with TypeScript. Designed
-                        for flexibility and ease of integration in modern
-                        applications.
-                    </p>
-                    <div class="project-tags">
-                        <span>TypeScript</span>
-                        <span>Logging</span>
-                        <span>Utils</span>
-                    </div>
-                </div>
+                <i class="fa-brands fa-github"></i>
+                View on GitHub
             </a>
-        </div>
+        </article>
     </div>
 </section>
 
@@ -105,142 +33,52 @@ import { Image } from "astro:assets";
         padding: 6rem 0;
     }
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2.5rem;
-    }
-
-    .project-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--card-border);
-        border-radius: 20px;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .project {
+        max-width: 720px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        position: relative;
-        -webkit-user-drag: none;
-        user-select: none;
-    }
-
-    .project-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        background: rgba(255, 255, 255, 0.04);
-    }
-
-    .project-image {
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 16/10;
-        border-bottom: 1px solid var(--card-border);
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .project-card:hover .project-image img {
-        transform: scale(1.05);
-    }
-
-    .project-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        backdrop-filter: blur(2px);
-    }
-
-    .project-card:hover .project-overlay {
-        opacity: 1;
-    }
-
-    .view-text {
-        color: white;
-        font-weight: 600;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transform: translateY(20px);
-        transition: transform 0.3s ease;
-    }
-
-    .project-card:hover .view-text {
-        transform: translateY(0);
-    }
-
-    .project-info {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    .project-header {
-        display: flex;
-        justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 1rem;
+        gap: 1rem;
+        background: #0c0c0f;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 2.8rem;
     }
 
-    .project-header h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: white;
+    .project h3 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: -0.8px;
         line-height: 1.2;
+        color: #ffffff;
     }
 
-    .icon-link {
+    .project p {
         color: var(--text-secondary);
-        font-size: 1.2rem;
-        transition: color 0.2s;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        margin-bottom: 0.8rem;
     }
 
-    .project-card:hover .icon-link {
-        color: white;
-    }
-
-    .project-info p {
-        color: var(--text-secondary);
+    .project-btn {
+        min-height: 44px;
+        padding: 0.85rem 1.6rem;
         font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        flex-grow: 1;
-    }
-
-    .project-tags {
-        display: flex;
-        flex-wrap: wrap;
         gap: 0.6rem;
     }
 
-    .project-tags span {
-        font-size: 0.8rem;
-        color: #d4d4d8;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.3rem 0.8rem;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
     @media (max-width: 768px) {
-        .projects-grid {
-            grid-template-columns: 1fr;
+        .project {
+            padding: 1.75rem;
+        }
+
+        .project h3 {
+            font-size: 1.85rem;
+        }
+
+        .project-btn {
+            width: 100%;
         }
     }
 </style>

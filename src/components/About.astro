@@ -1,44 +1,91 @@
+---
+---
+
 <section id="about" class="about-section">
     <div class="container">
         <div class="section-header">
             <h2>About <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">What I build, how I learn, and where I'm headed.</p>
         </div>
+
         <div class="about-grid">
-            <div class="bio-card fade-in">
-                <h3>Who am I?</h3>
-                <p>
-                    I'm a student developer who loves breaking things to see how
-                    they work (and then fixing them... usually). My world
-                    revolves around the terminal, clean code, and building
-                    systems that just
-                    <i>work</i>.
-                </p>
-                <p>
-                    I'm not an "expert" yet, but I'm learning fast. Whether it's
-                    wrestling with Linux configs or diving into Go routines, I'm
-                    all about the process.
-                </p>
+            <div class="story-card fade-in">
+                <h3>I make Discord bots, and now I'm learning Rust</h3>
+                <div class="story-paragraphs">
+                    <p>
+                        I write Discord bots in <strong class="text-highlight">JavaScript</strong> and <strong class="text-highlight">TypeScript</strong>. I've been doing this for a while, and it's still what I use the most.
+                    </p>
+                    <p>
+                        Lately I'm moving more and more toward <strong class="text-highlight">Rust</strong>. It takes a bit longer to learn, but I like the challenge, and I want to get better at it by building real projects.
+                    </p>
+                    <p>
+                        My plan is to keep practicing, try out small ideas, and contribute to <strong class="text-highlight">open source</strong> when I feel ready.
+                    </p>
+                </div>
             </div>
 
-            <div class="terminal-card fade-in">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">learning_goals.json</span>
+            <div class="focus-deck fade-in">
+                <div class="focus-card">
+                    <div class="focus-top">
+                        <div class="focus-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
+                                width="32"
+                                height="32"
+                                alt="Discord.js"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="focus-meta">
+                            <h4>Discord Bots</h4>
+                            <span class="focus-label">TypeScript & JavaScript</span>
+                        </div>
+                    </div>
+                    <p class="focus-desc">
+                        Bots with commands and automatic tasks that help Discord servers run smoothly.
+                    </p>
+                    <div class="card-pills">
+                        <span class="tech-pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="14" height="14" alt="TS" />
+                            TypeScript
+                        </span>
+                        <span class="tech-pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="14" height="14" alt="JS" />
+                            JavaScript
+                        </span>
+                        <span class="tech-pill">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" width="14" height="14" alt="Discord" />
+                            Discord.js
+                        </span>
+                    </div>
                 </div>
-                <div class="terminal-body">
-                    <pre><code><span class="keyword">const</span> <span class="variable">current_focus</span> = &#123;
-  <span class="property">languages</span>: [
-    <span class="string">"Rust"</span>,
-    <span class="string">"Java"</span>
-  ],
-  <span class="property">skills</span>: [
-    <span class="string">"Backend Arch"</span>,
-    <span class="string">"Server Mgmt"</span>
-  ],
-  <span class="property">status</span>: <span class="string">"Loading..."</span>
-&#125;;</code></pre>
+
+                <div class="focus-card">
+                    <div class="focus-top">
+                        <div class="focus-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
+                                width="32"
+                                height="32"
+                                alt="Rust"
+                                draggable="false"
+                            />
+                        </div>
+                        <div class="focus-meta">
+                            <h4>Rust & Open Source</h4>
+                            <span class="focus-label">Projects I'm building</span>
+                        </div>
+                        <span class="badge-learning">Learning</span>
+                    </div>
+                    <p class="focus-desc">
+                        Learning how Rust works by building small projects, and I want to contribute to open source later.
+                    </p>
+                    <div class="card-pills">
+                        <span class="tech-pill">Rust</span>
+                        <span class="tech-pill">Open Source</span>
+                        <span class="tech-pill">Command line</span>
+                        <span class="tech-pill">Personal Projects</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,130 +94,166 @@
 
 <style>
     .about-section {
-        padding: 6rem 0;
+        padding: 7rem 0;
         position: relative;
+    }
+
+    .section-subtitle {
+        color: var(--text-secondary);
+        font-size: 1.15rem;
+        margin-top: 0.5rem;
     }
 
     .about-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-        margin-top: 2rem;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+        align-items: stretch;
     }
 
-    .bio-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 24px;
-        padding: 2.5rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .bio-card h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-        color: white;
-    }
-
-    .bio-card p {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-    }
-
-    .bio-card p:last-child {
-        margin-bottom: 0;
-    }
-
-    .terminal-card {
-        background: #0f0f11;
+    .story-card {
+        background: #0c0c0f;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        border: 1px solid var(--card-border);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        font-family: "Fira Code", monospace;
-        transform: rotate(2deg);
-        transition: transform 0.3s ease;
+        padding: 2.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    .terminal-card:hover {
-        transform: rotate(0deg) scale(1.02);
+    .story-card h3 {
+        font-size: 2rem;
+        color: #ffffff;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: -0.8px;
     }
 
-    .terminal-header {
-        background: #1a1a1c;
-        padding: 12px 16px;
+    .story-paragraphs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .story-paragraphs p {
+        font-size: 1.05rem;
+        color: #a1a1aa;
+        line-height: 1.8;
+    }
+
+    .text-highlight {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .focus-deck {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        justify-content: space-between;
+    }
+
+    .focus-card {
+        background: #0c0c0f;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .focus-card:hover {
+        border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .focus-top {
         display: flex;
         align-items: center;
-        gap: 8px;
-        border-bottom: 1px solid #27272a;
+        gap: 1rem;
     }
 
-    .terminal-title {
-        margin-left: auto;
-        margin-right: auto;
-        color: #71717a;
-        font-size: 0.8rem;
-        font-family: var(--font-main);
+    .focus-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
-    .terminal-body {
-        padding: 2rem;
+    .focus-meta {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
-    .terminal-body pre {
+    .focus-meta h4 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .focus-label {
+        font-size: 0.82rem;
+        color: #a1a1aa;
+    }
+
+    .badge-learning {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #d4d4d8;
+        font-weight: 600;
+    }
+
+    .focus-desc {
+        font-size: 0.95rem;
+        color: #a1a1aa;
+        line-height: 1.65;
         margin: 0;
     }
 
-    .comment {
-        color: #5c6370;
-        font-style: italic;
+    .card-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
-    .code-header .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-    }
-
-    .dot.red {
-        background: #ff5f56;
-    }
-
-    .dot.yellow {
-        background: #ffbd2e;
-    }
-
-    .dot.green {
-        background: #27c93f;
-    }
-
-    .keyword {
-        color: #c678dd;
-    }
-
-    .variable {
-        color: #e06c75;
-    }
-
-    .property {
-        color: #d19a66;
-    }
-
-    .string {
-        color: #98c379;
+    .tech-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #e4e4e7;
+        font-weight: 500;
     }
 
     @media (max-width: 968px) {
-        .about-grid {
-            grid-template-columns: 1fr;
-            gap: 3rem;
+        .about-section {
+            padding: 4rem 0;
         }
 
-        .terminal-card {
-            transform: rotate(0deg);
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .story-card {
+            padding: 2.2rem;
+        }
+
+        .story-card h3 {
+            font-size: 1.6rem;
         }
     }
 </style>

@@ -454,8 +454,7 @@ import { Image } from "astro:assets";
     .tech-item:hover {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.3);
-        transform: scale(1.1);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
     }
 
     .tech-item:hover img {
@@ -484,6 +483,12 @@ import { Image } from "astro:assets";
     .tech-item:hover .tech-name {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .marquee-track {
+            animation: none;
+        }
     }
 
     @keyframes scroll {

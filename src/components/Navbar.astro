@@ -38,7 +38,7 @@
     }
 
     .dot {
-        color: var(--accent-blue);
+        color: var(--text-secondary);
     }
 
     .nav-links {
@@ -82,8 +82,7 @@
     }
 
     .btn-nav:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        background: #e4e4e7;
     }
 
     .btn-nav::after {
@@ -91,8 +90,38 @@
     }
 
     @media (max-width: 968px) {
+        nav {
+            padding: calc(env(safe-area-inset-top, 0px) + 0.9rem) 0 0.6rem;
+            background: rgba(5, 5, 5, 0.96);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
         .nav-links {
-            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem 1.25rem;
+        }
+
+        .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 0.4rem;
+        }
+
+        .nav-links a::after {
+            bottom: 6px;
+        }
+
+        .btn-nav {
+            min-height: 40px;
+            padding: 0.5rem 1.25rem;
         }
     }
 </style>
