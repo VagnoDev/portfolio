@@ -1,12 +1,12 @@
 <header class="site-header">
     <nav class="nav" aria-label="Main">
-        <a class="brand" href="#top">
+        <a class="brand" href="#main">
             vagno<span class="brand-dot">.</span>dev
         </a>
 
         <ul class="nav-links">
             <li><a href="#about" data-section="about">About</a></li>
-            <li><a href="#skills" data-section="skills">Skills</a></li>
+            <li><a href="#main">Skills</a></li>
             <li><a href="#projects" data-section="projects">Projects</a></li>
         </ul>
 
@@ -27,7 +27,7 @@
     <div class="menu" id="site-menu" aria-hidden="true">
         <nav class="menu-links" aria-label="Sections">
             <a href="#about" style="--i: 0"><span class="menu-index">01</span>About</a>
-            <a href="#skills" style="--i: 1"><span class="menu-index">02</span>Skills</a>
+            <a href="#main" style="--i: 1"><span class="menu-index">02</span>Skills</a>
             <a href="#projects" style="--i: 2"><span class="menu-index">03</span>Projects</a>
             <a href="#contact" style="--i: 3"><span class="menu-index">04</span>Contact</a>
         </nav>
@@ -344,18 +344,26 @@
         links.forEach((link) => link.removeAttribute("aria-current"));
     }
 
+    const active = new Map<string, boolean>();
+
     const spy = "IntersectionObserver" in window ? new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                const id = entry.target.id;
-                links.forEach((link) => {
-                    if (link.dataset.section === id) {
-                        link.setAttribute("aria-current", "true");
-                    } else {
-                        link.removeAttribute("aria-current");
-                    }
-                });
+                if (entry.isIntersecting) {
+                    active.set(entry.target.id, true);
+                } else {
+                    active.delete(entry.target.id);
+                }
+            });
+
+            const current = [...active.keys()].pop();
+
+            links.forEach((link) => {
+                if (link.dataset.section === current) {
+                    link.setAttribute("aria-current", "true");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
             });
         },
         { rootMargin: "-48% 0px -48% 0px" },

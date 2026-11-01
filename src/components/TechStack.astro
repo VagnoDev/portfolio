@@ -15,14 +15,7 @@ const items = [...tech, ...tech];
 const groups = [0, 1];
 ---
 
-<section id="skills" class="section stack-section">
-    <div class="container">
-        <div class="section-head reveal">
-            <p class="eyebrow">Stack</p>
-            <h2 class="heading-3">The tools I reach for without thinking.</h2>
-        </div>
-    </div>
-
+<div class="skills" role="group" aria-label="Languages and tools">
     <div class="marquee">
         <div class="marquee-track">
             {
@@ -32,10 +25,9 @@ const groups = [0, 1];
                             <div class="marquee-item">
                                 <img
                                     src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${item.icon}.svg`}
-                                    width="22"
-                                    height="22"
+                                    width="16"
+                                    height="16"
                                     alt=""
-                                    loading="lazy"
                                     draggable="false"
                                 />
                                 <span class="caption-1">{item.name}</span>
@@ -46,24 +38,26 @@ const groups = [0, 1];
             }
         </div>
     </div>
-</section>
+</div>
 
 <style>
-    .stack-section {
-        padding-bottom: 0;
+    .skills {
+        width: 100%;
+        max-width: var(--container);
+        margin-inline: auto;
+        padding-inline: var(--space-300);
+        overflow: hidden;
     }
 
     .marquee {
         overflow: hidden;
-        margin-top: var(--space-700);
-        padding-block: var(--space-300);
-        border-block: 1px solid var(--line);
-        mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+        padding-block: var(--space-100);
+        mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
         -webkit-mask-image: linear-gradient(
             to right,
             transparent,
-            #000 12%,
-            #000 88%,
+            #000 14%,
+            #000 86%,
             transparent
         );
     }
@@ -74,7 +68,7 @@ const groups = [0, 1];
         animation: drift 46s linear infinite;
     }
 
-    .marquee:hover .marquee-track {
+    .skills:hover .marquee-track {
         animation-play-state: paused;
     }
 
@@ -87,25 +81,20 @@ const groups = [0, 1];
     .marquee-item {
         display: inline-flex;
         align-items: center;
-        gap: var(--space-100);
-        padding: var(--space-75) var(--space-200);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-pill);
+        gap: var(--space-75);
         color: var(--text-muted);
         white-space: nowrap;
-        transition: border-color var(--duration-300) var(--ease),
-            color var(--duration-300) var(--ease);
+        transition: color var(--duration-300) var(--ease);
     }
 
     .marquee-item img {
-        width: 22px;
-        height: 22px;
-        filter: grayscale(1) opacity(0.65);
+        width: 16px;
+        height: 16px;
+        filter: grayscale(1) opacity(0.5);
         transition: filter var(--duration-300) var(--ease);
     }
 
     .marquee-item:hover {
-        border-color: var(--line-strong);
         color: var(--text);
     }
 
@@ -137,7 +126,7 @@ const groups = [0, 1];
         .marquee-group {
             flex-wrap: wrap;
             justify-content: center;
-            gap: var(--space-200);
+            gap: var(--space-200) var(--space-400);
             padding-right: 0;
         }
 
