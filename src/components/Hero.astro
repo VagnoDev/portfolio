@@ -1,16 +1,14 @@
 <section class="hero" id="top">
     <div class="container hero-grid">
         <div class="hero-copy">
-            <p class="eyebrow">Discord bots, web tools, Rust</p>
-
             <h1 class="heading-1 hero-title">
                 <span class="hero-line">Hey, I'm</span>
                 <span class="hero-line">Vagno.</span>
             </h1>
 
             <p class="body-2 hero-lede">
-                I build Discord bots and web tools in TypeScript and JavaScript. Right now I am
-                learning Rust by building a text editor, one commit at a time.
+                I build Discord bots in TypeScript and JavaScript, and I am learning Rust by writing
+                a text editor.
             </p>
 
             <div class="hero-actions">
@@ -21,20 +19,13 @@
                 <a class="btn btn-ghost button-md" href="#contact">Get in touch</a>
             </div>
 
-            <dl class="hero-facts">
-                <div>
-                    <dt class="caption-3">Writing</dt>
-                    <dd class="caption-2">TypeScript, JavaScript</dd>
-                </div>
-                <div>
-                    <dt class="caption-3">Learning</dt>
-                    <dd class="caption-2">Rust</dd>
-                </div>
-                <div>
-                    <dt class="caption-3">Find me</dt>
-                    <dd class="caption-2">Discord, GitHub</dd>
-                </div>
-            </dl>
+            <a class="hero-now" href="#projects">
+                <span class="hero-now-inner">
+                    <span class="caption-3 hero-now-label">Now</span>
+                    <span class="caption-1">Building Rusk, a text editor in Rust</span>
+                    <span class="hero-now-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
         </div>
 
         <aside class="hero-panel reveal" aria-label="Profile and current focus">
@@ -51,7 +42,7 @@
                     />
                     <div class="profile-meta">
                         <span id="discord-name" class="title-1">Vagno</span>
-                        <span id="discord-handle" class="caption-2 profile-handle">@vagnodev</span>
+                        <span id="discord-handle" class="caption-2 profile-handle">@vagno.dev</span>
                         <span id="discord-activity" class="caption-4 profile-activity" hidden></span>
                     </div>
                 </div>
@@ -68,33 +59,24 @@
                     <span class="title-3">Discord bots</span>
                 </div>
                 <div class="focus-row">
-                    <span class="caption-3 focus-label">Stack</span>
-                    <span class="title-3">TypeScript, Node.js, Discord.js</span>
-                </div>
-                <div class="focus-row">
                     <span class="caption-3 focus-label">Learning</span>
-                    <span class="title-3">Rust, systems, open source</span>
+                    <span class="title-3">Rust, open source</span>
                 </div>
             </div>
-
-            <p class="caption-2 panel-note">
-                Building small tools that people use every day, then reading the source of the ones
-                that break.
-            </p>
         </aside>
     </div>
 </section>
 
 <style>
     .hero {
-        padding-top: calc(var(--space-900) + var(--space-600));
+        padding-top: calc(var(--space-900) + var(--space-400));
         padding-bottom: var(--space-900);
     }
 
     .hero-grid {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
-        gap: var(--space-800);
+        gap: var(--space-700);
         align-items: center;
     }
 
@@ -105,16 +87,19 @@
     }
 
     .hero-title {
-        margin-top: var(--space-300);
         display: flex;
         flex-direction: column;
     }
 
+    @media (min-width: 1200px) {
+        .hero-title {
+            font-size: 72px;
+            line-height: 72px;
+        }
+    }
+
     .hero-line {
-        background-image: linear-gradient(90deg, #ffffff 0%, #9b9b9b 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        display: block;
     }
 
     .hero-lede {
@@ -130,30 +115,45 @@
         margin-top: var(--space-400);
     }
 
-    .hero-facts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-500);
-        margin-top: var(--space-600);
-        padding-top: var(--space-300);
-        border-top: 1px solid var(--line);
-        width: 100%;
+    .hero-now {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-top: var(--space-400);
+        color: var(--text-muted);
+        transition: color var(--duration-300) var(--ease);
     }
 
-    .hero-facts div {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-50);
+    .hero-now-inner {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-100);
+        padding-bottom: var(--space-50);
+        border-bottom: 1px solid var(--line);
+        transition: border-color var(--duration-300) var(--ease);
     }
 
-    .hero-facts dt {
+    .hero-now-label {
         color: var(--text-muted);
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
 
-    .hero-facts dd {
-        color: var(--text-muted);
+    .hero-now-arrow {
+        display: inline-block;
+        transition: transform var(--duration-300) var(--ease);
+    }
+
+    .hero-now:hover {
+        color: var(--text);
+    }
+
+    .hero-now:hover .hero-now-inner {
+        border-color: var(--line-strong);
+    }
+
+    .hero-now:hover .hero-now-arrow {
+        transform: translateX(3px);
     }
 
     .hero-panel {
@@ -175,8 +175,8 @@
     }
 
     .profile-avatar {
-        width: 64px;
-        height: 64px;
+        width: 72px;
+        height: 72px;
         border-radius: var(--radius-pill);
         object-fit: cover;
         background: var(--surface-raised);
@@ -262,12 +262,6 @@
         text-align: right;
     }
 
-    .panel-note {
-        color: var(--text-muted);
-        max-width: 320px;
-        margin-left: auto;
-    }
-
     @media (max-width: 900px) {
         .hero {
             padding-top: calc(var(--space-900) + var(--space-300));
@@ -278,15 +272,6 @@
             grid-template-columns: 1fr;
             gap: var(--space-600);
         }
-
-        .hero-facts {
-            gap: var(--space-400);
-        }
-
-        .panel-note {
-            margin-left: 0;
-            max-width: none;
-        }
     }
 
     @media (max-width: 560px) {
@@ -296,11 +281,6 @@
 
         .hero-actions .btn {
             width: 100%;
-        }
-
-        .hero-facts {
-            flex-direction: column;
-            gap: var(--space-200);
         }
     }
 </style>

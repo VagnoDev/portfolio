@@ -25,6 +25,10 @@ const words = tagline.split(" ");
 
     .tagline {
         max-width: 880px;
+        font-family: var(--font-serif);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.12;
     }
 
     .tagline-word {
@@ -61,7 +65,7 @@ const words = tagline.split(" ");
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (tagline && words.length) {
-        if (reduced) {
+        if (reduced || !("IntersectionObserver" in window)) {
             words.forEach((word) => word.classList.add("is-lit"));
         } else {
             tagline.classList.add("ready");

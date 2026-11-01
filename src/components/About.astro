@@ -1,36 +1,28 @@
 <section id="about" class="section">
     <div class="container">
         <div class="section-head reveal">
-            <p class="eyebrow">01 · About</p>
-            <h2 class="heading-2">
-                I make Discord bots, <span class="heading-soft">and now I am learning Rust.</span>
+            <p class="eyebrow">About</p>
+            <h2 class="heading-3">
+                I write Discord bots. Rust is what comes next.
             </h2>
         </div>
 
         <div class="about-grid">
-            <div class="card story-card reveal">
+            <article class="card story-card reveal">
                 <div class="story-paragraphs">
                     <p class="body-3">
-                        I write Discord bots in <strong class="strong">JavaScript</strong> and
-                        <strong class="strong">TypeScript</strong>. I have been doing this for a
-                        while, and it is still what I use the most.
+                        I write Discord bots in <strong class="strong">TypeScript</strong> and
+                        <strong class="strong">JavaScript</strong>. I have been doing it for a
+                        while, and it is still what I use most.
                     </p>
                     <p class="body-3">
-                        Lately I am moving more and more toward <strong class="strong">Rust</strong>.
-                        It takes a bit longer to learn, but I like the challenge, and I want to get
-                        better at it by building real projects.
-                    </p>
-                    <p class="body-3">
-                        My plan is to keep practicing, try out small ideas, and contribute to
-                        <strong class="strong">open source</strong> when I feel ready.
+                        Lately I spend more time in <strong class="strong">Rust</strong>. It is
+                        slower to learn, but I like the challenge, and building real projects is the
+                        only way I get better. Once I feel ready,
+                        <strong class="strong">open source</strong> is the next step.
                     </p>
                 </div>
-
-                <div class="story-signature">
-                    <span class="caption-3 signature-label">Currently</span>
-                    <span class="caption-1">Building Rusk, a text editor in Rust</span>
-                </div>
-            </div>
+            </article>
 
             <div class="focus-deck">
                 <article class="card focus-card reveal" style="--reveal-delay: 80ms">
@@ -50,12 +42,10 @@
                         </div>
                     </div>
                     <p class="body-6 focus-desc">
-                        Bots with commands and automatic tasks that help Discord servers run
-                        smoothly.
+                       Building and exploring new ideas for Discord, one project at a time.
                     </p>
                     <div class="card-pills">
                         <span class="tag">TypeScript</span>
-                        <span class="tag">JavaScript</span>
                         <span class="tag">Discord.js</span>
                     </div>
                 </article>
@@ -64,7 +54,7 @@
                     <div class="focus-top">
                         <div class="focus-icon">
                             <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
+                                src="/rust.png"
                                 width="28"
                                 height="28"
                                 alt=""
@@ -78,14 +68,11 @@
                         <span class="tag focus-badge">Learning</span>
                     </div>
                     <p class="body-6 focus-desc">
-                        Learning how Rust works by building small projects, then taking that into
-                        open source contributions.
+                        Learning Rust one small project at a time, with open source as the next step.
                     </p>
                     <div class="card-pills">
                         <span class="tag">Rust</span>
                         <span class="tag">Open source</span>
-                        <span class="tag">Command line</span>
-                        <span class="tag">Personal projects</span>
                     </div>
                 </article>
             </div>
@@ -95,49 +82,34 @@
 
 <style>
     .about-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
+        display: flex;
+        flex-direction: column;
         gap: var(--space-400);
-        align-items: stretch;
+        max-width: 940px;
     }
 
     .story-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: var(--space-500);
         padding: var(--space-500);
     }
 
     .story-paragraphs {
         display: flex;
         flex-direction: column;
-        gap: var(--space-200);
+        gap: var(--space-300);
+        max-width: 72ch;
         color: var(--text-muted);
     }
+
+
 
     .strong {
         color: var(--text);
         font-weight: 500;
     }
 
-    .story-signature {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-50);
-        padding-top: var(--space-300);
-        border-top: 1px solid var(--line);
-    }
-
-    .signature-label {
-        color: var(--text-muted);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-    }
-
     .focus-deck {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: var(--space-400);
     }
 
@@ -145,7 +117,6 @@
         display: flex;
         flex-direction: column;
         gap: var(--space-200);
-        flex: 1;
         transition: border-color var(--duration-300) var(--ease),
             background-color var(--duration-300) var(--ease);
     }
@@ -199,12 +170,12 @@
     }
 
     @media (max-width: 900px) {
-        .about-grid {
+        .focus-deck {
             grid-template-columns: 1fr;
         }
 
         .story-card {
-            padding: var(--space-400);
+            padding: var(--space-300);
         }
     }
 </style>

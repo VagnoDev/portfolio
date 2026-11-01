@@ -7,8 +7,9 @@
     --text: #ffffff;
     --text-muted: #a1a1aa;
     --text-dim: #71717a;
-    --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "Geist Mono", ui-monospace, monospace;
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Instrument Serif", Georgia, ui-serif, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
     --space-25: 2px;
     --space-50: 4px;
@@ -314,7 +315,8 @@ section[id] {
     margin-bottom: var(--space-600);
 }
 
-.section-head .heading-2 {
+.section-head .heading-2,
+.section-head .heading-3 {
     max-width: 680px;
 }
 
@@ -336,10 +338,6 @@ section[id] {
     width: var(--space-400);
     height: 1px;
     background: var(--line-strong);
-}
-
-.heading-soft {
-    color: var(--text-muted);
 }
 
 .card {

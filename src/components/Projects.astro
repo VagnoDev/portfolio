@@ -1,18 +1,11 @@
 <section id="projects" class="section">
     <div class="container">
         <div class="section-head reveal">
-            <p class="eyebrow">03 · Projects</p>
-            <h2 class="heading-2">
-                Things I built <span class="heading-soft">to learn something.</span>
-            </h2>
+            <p class="eyebrow">Projects</p>
+            <h2 class="heading-3">Things I built to learn something.</h2>
         </div>
 
         <article class="project reveal">
-            <div class="project-meta">
-                <span class="caption-3 project-index">01</span>
-                <span class="caption-3 project-year">Featured</span>
-            </div>
-
             <div class="project-body">
                 <div class="project-head">
                     <h3 class="heading-3">Rusk</h3>
@@ -28,17 +21,16 @@
                 <div class="project-tags">
                     <span class="tag">Rust</span>
                     <span class="tag">Text editor</span>
-                    <span class="tag">Personal project</span>
                 </div>
 
                 <a
-                    class="project-link"
+                    class="btn btn-ghost button-sm project-link"
                     href="https://github.com/VagnoDev/Rusk"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <span class="title-3">View source on GitHub</span>
-                    <span class="project-arrow" aria-hidden="true">↗</span>
+                    View source on GitHub
+                    <span class="btn-arrow" aria-hidden="true">→</span>
                 </a>
             </div>
         </article>
@@ -47,9 +39,6 @@
 
 <style>
     .project {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: var(--space-500);
         padding: var(--space-500);
         background: var(--surface);
         border: 1px solid var(--line);
@@ -59,23 +48,6 @@
 
     .project:hover {
         border-color: var(--line-strong);
-    }
-
-    .project-meta {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-75);
-    }
-
-    .project-index {
-        font-family: var(--font-mono);
-        color: var(--text);
-    }
-
-    .project-year {
-        color: var(--text-muted);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
     }
 
     .project-body {
@@ -103,39 +75,13 @@
     }
 
     .project-link {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-100);
         align-self: flex-start;
         margin-top: var(--space-100);
-        padding-bottom: var(--space-50);
-        border-bottom: 1px solid var(--line);
-        transition: border-color var(--duration-300) var(--ease);
-    }
-
-    .project-arrow {
-        display: inline-block;
-        transition: transform var(--duration-300) var(--ease);
-    }
-
-    .project-link:hover {
-        border-color: var(--line-strong);
-    }
-
-    .project-link:hover .project-arrow {
-        transform: translate(var(--space-25), calc(var(--space-25) * -1));
     }
 
     @media (max-width: 900px) {
         .project {
-            grid-template-columns: 1fr;
-            gap: var(--space-300);
             padding: var(--space-400);
-        }
-
-        .project-meta {
-            flex-direction: row;
-            justify-content: space-between;
         }
     }
 </style>

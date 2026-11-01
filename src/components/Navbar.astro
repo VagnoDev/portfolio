@@ -66,11 +66,15 @@
     }
 
     .brand {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding-inline: var(--space-50);
+        margin-right: auto;
         font-size: 18px;
         line-height: 28px;
         font-weight: 600;
         letter-spacing: -0.02em;
-        margin-right: auto;
     }
 
     .brand-dot {
@@ -87,7 +91,7 @@
         position: relative;
         display: inline-flex;
         align-items: center;
-        height: 32px;
+        min-height: 44px;
         font-size: 14px;
         line-height: 20px;
         font-weight: 500;
@@ -188,6 +192,8 @@
         -webkit-backdrop-filter: blur(28px);
         opacity: 0;
         visibility: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
         transition: opacity var(--duration-500) var(--ease),
             visibility var(--duration-500) var(--ease);
     }
@@ -247,9 +253,38 @@
         transition-delay: 260ms;
     }
 
+    .menu-foot a {
+        padding-block: var(--space-100);
+    }
+
     .menu-note {
         font-family: var(--font-mono);
-        color: var(--text-dim);
+        color: var(--text-muted);
+    }
+
+    @media (max-height: 560px) {
+        .menu {
+            justify-content: flex-start;
+            gap: var(--space-300);
+            padding-top: calc(var(--space-800) + var(--space-200));
+            padding-bottom: var(--space-400);
+        }
+
+        .menu-links {
+            gap: 0;
+        }
+
+        .menu-links a {
+            padding-block: var(--space-50);
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .menu-foot {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: var(--space-200);
+        }
     }
 
     @media (max-width: 900px) {
@@ -305,7 +340,11 @@
         document.querySelectorAll<HTMLAnchorElement>(".nav-links a[data-section]"),
     );
 
-    const spy = new IntersectionObserver(
+    if (!("IntersectionObserver" in window)) {
+        links.forEach((link) => link.removeAttribute("aria-current"));
+    }
+
+    const spy = "IntersectionObserver" in window ? new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
@@ -320,10 +359,10 @@
             });
         },
         { rootMargin: "-48% 0px -48% 0px" },
-    );
+    ) : null;
 
     links.forEach((link) => {
         const section = document.getElementById(link.dataset.section ?? "");
-        if (section) spy.observe(section);
+        if (section) spy?.observe(section);
     });
 </script>

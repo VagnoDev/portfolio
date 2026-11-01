@@ -29,7 +29,9 @@ import Footer from "../components/Footer.astro";
 <script>
     const reveals = document.querySelectorAll<HTMLElement>(".reveal");
 
-    if (reveals.length) {
+    if (!("IntersectionObserver" in window)) {
+        reveals.forEach((element) => element.classList.add("is-visible"));
+    } else if (reveals.length) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
