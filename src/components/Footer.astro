@@ -3,84 +3,74 @@ import { Image } from "astro:assets";
 import astroLogo from "../assets/astro-logo-light.svg";
 ---
 
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <p>&copy; {new Date().getFullYear()} Vagno. All rights reserved.</p>
-            <div class="footer-links">
-                <a
-                    href="https://astro.build"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="astro-link"
-                >
-                    Made with <Image
-                        src={astroLogo}
-                        alt="Astro Logo"
-                        width={20}
-                        height={20}
-                        draggable="false"
-                    />
-                </a>
-                <span class="separator">|</span>
-                <a
-                    href="https://github.com/VagnoDev/portfolio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Source Code
-                </a>
-            </div>
+<footer class="footer">
+    <div class="container footer-inner">
+        <p class="caption-2 footer-copy">© {new Date().getFullYear()} Vagno</p>
+
+        <div class="footer-links">
+            <a
+                class="caption-2 footer-link astro-link"
+                href="https://astro.build"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Built with
+                <Image src={astroLogo} alt="Astro" width={16} height={16} draggable="false" />
+                Astro
+            </a>
+            <a
+                class="caption-2 footer-link"
+                href="https://github.com/VagnoDev/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Source code
+            </a>
+            <a class="caption-2 footer-link" href="#top">Back to top ↑</a>
         </div>
     </div>
 </footer>
 
 <style>
-    footer {
-        padding: 3rem 0;
-        border-top: 1px solid var(--card-border);
-        background: #050505;
-        font-size: 0.9rem;
+    .footer {
+        border-top: 1px solid var(--line);
+        padding-block: var(--space-400);
     }
 
-    .footer-content {
+    .footer-inner {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 1rem;
-        color: var(--text-secondary);
+        justify-content: space-between;
+        gap: var(--space-200);
+    }
+
+    .footer-copy {
+        color: var(--text-muted);
     }
 
     .footer-links {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space-300);
     }
 
-    .astro-link {
-        display: flex;
+    .footer-link {
+        display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: var(--space-50);
+        color: var(--text-muted);
+        transition: color var(--duration-300) var(--ease);
     }
 
-    .separator {
-        opacity: 0.5;
+    .footer-link:hover {
+        color: var(--text);
     }
 
-    a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    a:hover {
-        color: var(--accent);
-    }
-
-    @media (min-width: 768px) {
-        .footer-content {
-            flex-direction: row;
-            justify-content: space-between;
+    @media (max-width: 700px) {
+        .footer-inner {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 </style>

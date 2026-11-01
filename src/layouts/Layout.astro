@@ -2,8 +2,8 @@
 import "../styles/global.css";
 
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
@@ -11,56 +11,37 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-		<link rel="icon" type="image/x-icon" href="/vagno.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		/>
-		<style is:global>
-			* {
-				-webkit-user-drag: none;
-				-khtml-user-drag: none;
-				-moz-user-drag: none;
-				-o-user-drag: none;
-				user-drag: none;
-			}
-
-			img,
-			a,
-			div,
-			span,
-			section {
-				-webkit-user-drag: none;
-				user-select: none;
-			}
-
-			img {
-				pointer-events: none;
-			}
-		</style>
-		<script>
-			window.addEventListener(
-				"dragstart",
-				(e) => {
-					e.preventDefault();
-				},
-				false,
-			);
-		</script>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="#000000" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="vagno.dev" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="/vagno.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+        />
+        <title>{title}</title>
+        <noscript>
+            <style>
+                .reveal,
+                .tagline-word {
+                    opacity: 1 !important;
+                    transform: none !important;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <slot />
+    </body>
 </html>

@@ -1,186 +1,172 @@
----
----
-
-<section id="about" class="about-section">
+<section id="about" class="section">
     <div class="container">
-        <div class="section-header">
-            <h2>About <span class="gradient-text">Me</span></h2>
-            <p class="section-subtitle">What I build, how I learn, and where I'm headed.</p>
+        <div class="section-head reveal">
+            <p class="eyebrow">01 · About</p>
+            <h2 class="heading-2">
+                I make Discord bots, <span class="heading-soft">and now I am learning Rust.</span>
+            </h2>
         </div>
 
         <div class="about-grid">
-            <div class="story-card fade-in">
-                <h3>I make Discord bots, and now I'm learning Rust</h3>
+            <div class="card story-card reveal">
                 <div class="story-paragraphs">
-                    <p>
-                        I write Discord bots in <strong class="text-highlight">JavaScript</strong> and <strong class="text-highlight">TypeScript</strong>. I've been doing this for a while, and it's still what I use the most.
+                    <p class="body-3">
+                        I write Discord bots in <strong class="strong">JavaScript</strong> and
+                        <strong class="strong">TypeScript</strong>. I have been doing this for a
+                        while, and it is still what I use the most.
                     </p>
-                    <p>
-                        Lately I'm moving more and more toward <strong class="text-highlight">Rust</strong>. It takes a bit longer to learn, but I like the challenge, and I want to get better at it by building real projects.
+                    <p class="body-3">
+                        Lately I am moving more and more toward <strong class="strong">Rust</strong>.
+                        It takes a bit longer to learn, but I like the challenge, and I want to get
+                        better at it by building real projects.
                     </p>
-                    <p>
-                        My plan is to keep practicing, try out small ideas, and contribute to <strong class="text-highlight">open source</strong> when I feel ready.
+                    <p class="body-3">
+                        My plan is to keep practicing, try out small ideas, and contribute to
+                        <strong class="strong">open source</strong> when I feel ready.
                     </p>
+                </div>
+
+                <div class="story-signature">
+                    <span class="caption-3 signature-label">Currently</span>
+                    <span class="caption-1">Building Rusk, a text editor in Rust</span>
                 </div>
             </div>
 
-            <div class="focus-deck fade-in">
-                <div class="focus-card">
+            <div class="focus-deck">
+                <article class="card focus-card reveal" style="--reveal-delay: 80ms">
                     <div class="focus-top">
                         <div class="focus-icon">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
-                                width="32"
-                                height="32"
-                                alt="Discord.js"
+                                width="28"
+                                height="28"
+                                alt=""
                                 draggable="false"
                             />
                         </div>
                         <div class="focus-meta">
-                            <h4>Discord Bots</h4>
-                            <span class="focus-label">TypeScript & JavaScript</span>
+                            <h3 class="title-1">Discord bots</h3>
+                            <span class="caption-2">TypeScript and JavaScript</span>
                         </div>
                     </div>
-                    <p class="focus-desc">
-                        Bots with commands and automatic tasks that help Discord servers run smoothly.
+                    <p class="body-6 focus-desc">
+                        Bots with commands and automatic tasks that help Discord servers run
+                        smoothly.
                     </p>
                     <div class="card-pills">
-                        <span class="tech-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="14" height="14" alt="TS" />
-                            TypeScript
-                        </span>
-                        <span class="tech-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="14" height="14" alt="JS" />
-                            JavaScript
-                        </span>
-                        <span class="tech-pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" width="14" height="14" alt="Discord" />
-                            Discord.js
-                        </span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Discord.js</span>
                     </div>
-                </div>
+                </article>
 
-                <div class="focus-card">
+                <article class="card focus-card reveal" style="--reveal-delay: 160ms">
                     <div class="focus-top">
                         <div class="focus-icon">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
-                                width="32"
-                                height="32"
-                                alt="Rust"
+                                width="28"
+                                height="28"
+                                alt=""
                                 draggable="false"
                             />
                         </div>
                         <div class="focus-meta">
-                            <h4>Rust & Open Source</h4>
-                            <span class="focus-label">Projects I'm building</span>
+                            <h3 class="title-1">Rust and open source</h3>
+                            <span class="caption-2">Projects I am building</span>
                         </div>
-                        <span class="badge-learning">Learning</span>
+                        <span class="tag focus-badge">Learning</span>
                     </div>
-                    <p class="focus-desc">
-                        Learning how Rust works by building small projects, and I want to contribute to open source later.
+                    <p class="body-6 focus-desc">
+                        Learning how Rust works by building small projects, then taking that into
+                        open source contributions.
                     </p>
                     <div class="card-pills">
-                        <span class="tech-pill">Rust</span>
-                        <span class="tech-pill">Open Source</span>
-                        <span class="tech-pill">Command line</span>
-                        <span class="tech-pill">Personal Projects</span>
+                        <span class="tag">Rust</span>
+                        <span class="tag">Open source</span>
+                        <span class="tag">Command line</span>
+                        <span class="tag">Personal projects</span>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-    .about-section {
-        padding: 7rem 0;
-        position: relative;
-    }
-
-    .section-subtitle {
-        color: var(--text-secondary);
-        font-size: 1.15rem;
-        margin-top: 0.5rem;
-    }
-
     .about-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 3.5rem;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: var(--space-400);
         align-items: stretch;
     }
 
     .story-card {
-        background: #0c0c0f;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 2.8rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .story-card h3 {
-        font-size: 2rem;
-        color: #ffffff;
-        font-weight: 800;
-        line-height: 1.25;
-        letter-spacing: -0.8px;
+        justify-content: space-between;
+        gap: var(--space-500);
+        padding: var(--space-500);
     }
 
     .story-paragraphs {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
+        gap: var(--space-200);
+        color: var(--text-muted);
     }
 
-    .story-paragraphs p {
-        font-size: 1.05rem;
-        color: #a1a1aa;
-        line-height: 1.8;
+    .strong {
+        color: var(--text);
+        font-weight: 500;
     }
 
-    .text-highlight {
-        color: #ffffff;
-        font-weight: 600;
+    .story-signature {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-50);
+        padding-top: var(--space-300);
+        border-top: 1px solid var(--line);
+    }
+
+    .signature-label {
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     .focus-deck {
         display: flex;
         flex-direction: column;
-        gap: 1.8rem;
-        justify-content: space-between;
+        gap: var(--space-400);
     }
 
     .focus-card {
-        background: #0c0c0f;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 2.2rem;
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
-        transition: border-color 0.3s ease;
+        gap: var(--space-200);
+        flex: 1;
+        transition: border-color var(--duration-300) var(--ease),
+            background-color var(--duration-300) var(--ease);
     }
 
     .focus-card:hover {
-        border-color: rgba(255, 255, 255, 0.16);
+        border-color: var(--line-strong);
+        background: var(--surface-raised);
     }
 
     .focus-top {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space-200);
     }
 
     .focus-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        background: var(--surface-raised);
+        border: 1px solid var(--line);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -191,69 +177,34 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        min-width: 0;
     }
 
-    .focus-meta h4 {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: #ffffff;
+    .focus-meta .caption-2 {
+        color: var(--text-muted);
     }
 
-    .focus-label {
-        font-size: 0.82rem;
-        color: #a1a1aa;
-    }
-
-    .badge-learning {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.75rem;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        color: #d4d4d8;
-        font-weight: 600;
+    .focus-badge {
+        flex-shrink: 0;
     }
 
     .focus-desc {
-        font-size: 0.95rem;
-        color: #a1a1aa;
-        line-height: 1.65;
-        margin: 0;
+        color: var(--text-muted);
     }
 
     .card-pills {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: var(--space-75);
     }
 
-    .tech-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-size: 0.8rem;
-        padding: 0.35rem 0.75rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        color: #e4e4e7;
-        font-weight: 500;
-    }
-
-    @media (max-width: 968px) {
-        .about-section {
-            padding: 4rem 0;
-        }
-
+    @media (max-width: 900px) {
         .about-grid {
             grid-template-columns: 1fr;
-            gap: 2.5rem;
         }
 
         .story-card {
-            padding: 2.2rem;
-        }
-
-        .story-card h3 {
-            font-size: 1.6rem;
+            padding: var(--space-400);
         }
     }
 </style>

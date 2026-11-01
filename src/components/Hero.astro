@@ -1,214 +1,227 @@
----
----
-
-<section class="hero">
+<section class="hero" id="top">
     <div class="container hero-grid">
-        <div class="hero-text fade-in">
-            <h1>Hey, I'm <br><span class="gradient-text">Vagno</span></h1>
-            <p class="hero-desc">
-                Developer building Discord bots and web tools with TypeScript and JavaScript.
-                Currently exploring Rust to enter the open-source world and craft high-performance personal projects.
+        <div class="hero-copy">
+            <p class="eyebrow">Discord bots, web tools, Rust</p>
+
+            <h1 class="heading-1 hero-title">
+                <span class="hero-line">Hey, I'm</span>
+                <span class="hero-line">Vagno.</span>
+            </h1>
+
+            <p class="body-2 hero-lede">
+                I build Discord bots and web tools in TypeScript and JavaScript. Right now I am
+                learning Rust by building a text editor, one commit at a time.
             </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary button-md" href="#projects">
+                    View projects
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn-ghost button-md" href="#contact">Get in touch</a>
             </div>
+
+            <dl class="hero-facts">
+                <div>
+                    <dt class="caption-3">Writing</dt>
+                    <dd class="caption-2">TypeScript, JavaScript</dd>
+                </div>
+                <div>
+                    <dt class="caption-3">Learning</dt>
+                    <dd class="caption-2">Rust</dd>
+                </div>
+                <div>
+                    <dt class="caption-3">Find me</dt>
+                    <dd class="caption-2">Discord, GitHub</dd>
+                </div>
+            </dl>
         </div>
 
-        <div class="hero-visual fade-in">
-            <div class="profile-card">
+        <aside class="hero-panel reveal" aria-label="Profile and current focus">
+            <div class="card profile-card">
                 <div class="profile-top">
                     <img
                         id="discord-avatar"
                         class="profile-avatar"
                         src="/vagno.ico"
-                        width="72"
-                        height="72"
-                        alt="Discord avatar"
+                        width="64"
+                        height="64"
+                        alt="Discord avatar of Vagno"
                         draggable="false"
                     />
                     <div class="profile-meta">
-                        <span id="discord-name" class="profile-name">Vagno</span>
-                        <span id="discord-handle" class="profile-handle">@vagnodev</span>
-                        <span id="discord-activity" class="profile-activity" hidden></span>
+                        <span id="discord-name" class="title-1">Vagno</span>
+                        <span id="discord-handle" class="caption-2 profile-handle">@vagnodev</span>
+                        <span id="discord-activity" class="caption-4 profile-activity" hidden></span>
                     </div>
                 </div>
+
                 <div id="discord-status" class="profile-status" hidden>
                     <span id="discord-status-dot" class="status-dot"></span>
-                    <span id="discord-status-text">Offline</span>
+                    <span id="discord-status-text" class="caption-2">Offline</span>
                 </div>
 
-                <div class="feature-box">
-                    <div class="feature-header">
-                        <div class="icon-wrap">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
-                                width="30"
-                                height="30"
-                                alt="Discord.js"
-                                draggable="false"
-                            />
-                        </div>
-                        <div class="feature-info">
-                            <span class="feature-title">Discord Bots</span>
-                            <span class="feature-sub">TypeScript & JavaScript</span>
-                        </div>
-                    </div>
-                    <div class="feature-tags">
-                        <span class="pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="16" height="16" alt="TS" />
-                            TypeScript
-                        </span>
-                        <span class="pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="16" height="16" alt="JS" />
-                            JavaScript
-                        </span>
-                        <span class="pill">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="16" height="16" alt="Node" />
-                            Node.js
-                        </span>
-                    </div>
-                </div>
+                <hr class="hr" />
 
-                <div class="feature-box">
-                    <div class="feature-header">
-                        <div class="icon-wrap">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
-                                width="30"
-                                height="30"
-                                alt="Rust"
-                                draggable="false"
-                            />
-                        </div>
-                        <div class="feature-info">
-                            <span class="feature-title">Learning Rust</span>
-                            <span class="feature-sub">Systems & Open Source</span>
-                        </div>
-                        <span class="learning-pill">Exploring</span>
-                    </div>
-                    <p class="feature-detail">
-                        Building personal projects and preparing for open-source contributions.
-                    </p>
+                <div class="focus-row">
+                    <span class="caption-3 focus-label">Focus</span>
+                    <span class="title-3">Discord bots</span>
+                </div>
+                <div class="focus-row">
+                    <span class="caption-3 focus-label">Stack</span>
+                    <span class="title-3">TypeScript, Node.js, Discord.js</span>
+                </div>
+                <div class="focus-row">
+                    <span class="caption-3 focus-label">Learning</span>
+                    <span class="title-3">Rust, systems, open source</span>
                 </div>
             </div>
-        </div>
+
+            <p class="caption-2 panel-note">
+                Building small tools that people use every day, then reading the source of the ones
+                that break.
+            </p>
+        </aside>
     </div>
 </section>
 
 <style>
     .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding-top: 100px;
-        position: relative;
+        padding-top: calc(var(--space-900) + var(--space-600));
+        padding-bottom: var(--space-900);
     }
 
     .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 4rem;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: var(--space-800);
         align-items: center;
     }
 
-    .hero h1 {
-        font-size: 4.5rem;
-        line-height: 1.05;
-        margin-bottom: 1.8rem;
-        font-weight: 800;
-        letter-spacing: -2px;
-    }
-
-    .hero-desc {
-        color: var(--text-secondary);
-        font-size: 1.2rem;
-        margin-bottom: 2.5rem;
-        max-width: 520px;
-        line-height: 1.75;
-    }
-
-    .hero-btns {
+    .hero-copy {
         display: flex;
-        gap: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-title {
+        margin-top: var(--space-300);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-line {
+        background-image: linear-gradient(90deg, #ffffff 0%, #9b9b9b 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .hero-lede {
+        max-width: 680px;
+        margin-top: var(--space-300);
+        color: var(--text-muted);
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-100);
+        margin-top: var(--space-400);
+    }
+
+    .hero-facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-500);
+        margin-top: var(--space-600);
+        padding-top: var(--space-300);
+        border-top: 1px solid var(--line);
+        width: 100%;
+    }
+
+    .hero-facts div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-50);
+    }
+
+    .hero-facts dt {
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .hero-facts dd {
+        color: var(--text-muted);
+    }
+
+    .hero-panel {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-300);
     }
 
     .profile-card {
-        background: #0c0c0f;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 1.75rem;
         display: flex;
         flex-direction: column;
-        gap: 1.25rem;
+        gap: var(--space-200);
     }
 
     .profile-top {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space-200);
     }
 
     .profile-avatar {
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius-pill);
         object-fit: cover;
-        background: #18181b;
+        background: var(--surface-raised);
         flex-shrink: 0;
     }
 
     .profile-meta {
         display: flex;
         flex-direction: column;
-        gap: 0.15rem;
+        gap: var(--space-25);
         min-width: 0;
     }
 
-    .profile-name {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #ffffff;
-    }
-
     .profile-handle {
-        font-size: 0.85rem;
-        color: #71717a;
+        color: var(--text-muted);
     }
 
     .profile-activity {
-        font-size: 0.85rem;
-        color: #a1a1aa;
+        color: var(--text-muted);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    .profile-activity[hidden] {
+    .profile-activity[hidden],
+    .profile-status[hidden] {
         display: none;
     }
 
     .profile-status {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
-        width: fit-content;
-        padding: 0.35rem 0.8rem;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 999px;
-        font-size: 0.85rem;
-        color: #d4d4d8;
-    }
-
-    .profile-status[hidden] {
-        display: none;
+        gap: var(--space-100);
+        align-self: flex-start;
+        padding: var(--space-50) var(--space-100);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-pill);
     }
 
     .status-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #71717a;
+        width: var(--space-75);
+        height: var(--space-75);
+        border-radius: var(--radius-pill);
+        background: var(--text-dim);
+        transition: background-color var(--duration-300) var(--ease);
     }
 
     .status-dot.online {
@@ -223,133 +236,71 @@
         background: #ef4444;
     }
 
-    .feature-box {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 12px;
-        padding: 1.1rem;
+    .focus-row {
         display: flex;
-        flex-direction: column;
-        gap: 0.85rem;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-200);
+        padding-block: var(--space-75);
+        border-bottom: 1px solid var(--line);
     }
 
-    .feature-header {
-        display: flex;
-        align-items: center;
-        gap: 0.85rem;
+    .focus-row:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
     }
 
-    .icon-wrap {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .focus-label {
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
         flex-shrink: 0;
     }
 
-    .feature-info {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+    .focus-row .title-3 {
+        color: var(--text-muted);
+        text-align: right;
     }
 
-    .feature-title {
-        font-weight: 700;
-        font-size: 0.95rem;
-        color: #ffffff;
+    .panel-note {
+        color: var(--text-muted);
+        max-width: 320px;
+        margin-left: auto;
     }
 
-    .feature-sub {
-        font-size: 0.8rem;
-        color: #a1a1aa;
-    }
-
-    .feature-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        padding: 0.3rem 0.7rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        color: #e4e4e7;
-    }
-
-    .learning-pill {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.65rem;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        color: #d4d4d8;
-        font-weight: 600;
-    }
-
-    .feature-detail {
-        font-size: 0.85rem;
-        color: #a1a1aa;
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    @media (max-width: 968px) {
+    @media (max-width: 900px) {
         .hero {
-            padding-top: 9.5rem;
-            padding-bottom: 40px;
-            min-height: auto;
+            padding-top: calc(var(--space-900) + var(--space-300));
+            padding-bottom: var(--space-700);
         }
 
         .hero-grid {
             grid-template-columns: 1fr;
-            gap: 3.5rem;
-            text-align: center;
+            gap: var(--space-600);
         }
 
-        .hero h1 {
-            font-size: 3.2rem;
+        .hero-facts {
+            gap: var(--space-400);
         }
 
-        .hero-desc {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-btns {
-            justify-content: center;
-        }
-
-        .profile-card {
-            max-width: 480px;
-            margin: 0 auto;
-            width: 100%;
-            text-align: left;
+        .panel-note {
+            margin-left: 0;
+            max-width: none;
         }
     }
 
-    @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 2.6rem;
-        }
-
-        .hero-btns {
-            flex-direction: column;
-        }
-
-        .hero-desc {
-            font-size: 1.05rem;
-        }
-
-        .hero-btns .btn {
+    @media (max-width: 560px) {
+        .hero-actions {
             width: 100%;
+        }
+
+        .hero-actions .btn {
+            width: 100%;
+        }
+
+        .hero-facts {
+            flex-direction: column;
+            gap: var(--space-200);
         }
     }
 </style>
@@ -384,9 +335,10 @@
     const renderProfile = (data: any) => {
         const user = data.discord_user;
         const status: string = data.discord_status ?? "offline";
-        const custom = (data.activities ?? []).find((a: any) => a.type === 4);
+        const custom = (data.activities ?? []).find((activity: any) => activity.type === 4);
 
         avatarEl.src = avatarUrl(user);
+        avatarEl.alt = `Discord avatar of ${user.global_name || user.username}`;
         nameEl.textContent = user.global_name || user.username;
         handleEl.textContent = `@${user.username}`;
 
@@ -404,9 +356,9 @@
 
     const loadDiscordProfile = async () => {
         try {
-            const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
-            if (!res.ok) return;
-            const json = await res.json();
+            const response = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+            if (!response.ok) return;
+            const json = await response.json();
             if (json.success) renderProfile(json.data);
         } catch {
             statusEl.hidden = true;

@@ -1,0 +1,81 @@
+---
+const tagline =
+    "I would rather ship a small tool that someone opens every day than a big idea that never leaves the notes app.";
+const words = tagline.split(" ");
+---
+
+<section class="tagline-section" aria-label="How I work">
+    <div class="container">
+        <p class="heading-2 tagline">
+            {
+                words.map((word) => (
+                    <span class="tagline-word">{word}</span>
+                ))
+            }
+        </p>
+    </div>
+</section>
+
+<style>
+    .tagline-section {
+        padding-block: var(--space-900);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+    }
+
+    .tagline {
+        max-width: 880px;
+    }
+
+    .tagline-word {
+        display: inline-block;
+        margin-right: 0.26em;
+    }
+
+    .tagline.ready .tagline-word {
+        opacity: 0.3;
+        transition: opacity 600ms var(--ease);
+    }
+
+    .tagline.ready .tagline-word.is-lit {
+        opacity: 1;
+    }
+
+    @media (max-width: 560px) {
+        .tagline-section {
+            padding-block: var(--space-700);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .tagline.ready .tagline-word {
+            opacity: 1;
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+    const tagline = document.querySelector<HTMLElement>(".tagline");
+    const words = Array.from(document.querySelectorAll<HTMLElement>(".tagline-word"));
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (tagline && words.length) {
+        if (reduced) {
+            words.forEach((word) => word.classList.add("is-lit"));
+        } else {
+            tagline.classList.add("ready");
+            const light = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add("is-lit");
+                        light.unobserve(entry.target);
+                    });
+                },
+                { rootMargin: "0px 0px -25% 0px" },
+            );
+            words.forEach((word) => light.observe(word));
+        }
+    }
+</script>
