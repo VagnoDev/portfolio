@@ -6,9 +6,10 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-  { id: 'ts',      name: 'TypeScript', icon: '/typescript.png' },
-  { id: 'js',      name: 'JavaScript', icon: '/javascript.png' },
-  { id: 'djs',     name: 'Discord.js',       icon: '/djs.png' },
-  { id: 'go',      name: 'Go',        icon: '/go.png' },
-  { id: 'mongodb', name: 'MongoDB',       icon: '/mongodb.png' },
+  { id: 'ts', name: 'TypeScript', icon: '/typescript.png' },
+  { id: 'js', name: 'JavaScript', icon: '/javascript.png' },
+  { id: 'djs', name: 'Discord.js', icon: '/djs.png' },
+  { id: 'go', name: 'Go', icon: '/go.png' },
+  { id: 'mongodb', name: 'MongoDB', icon: '/mongodb.png' },
+  { id: 'git', name: 'Git', icon: '/git.png' },
 ];
